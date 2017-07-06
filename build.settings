@@ -1,0 +1,82 @@
+-- Supported values for orientation:
+-- portrait, portraitUpsideDown, landscapeLeft, landscapeRight
+settings = 
+{
+
+    splashScreen = 
+    {
+        enable = false
+    },
+
+    orientation = 
+    {
+        default = "portrait", 
+        supported = { "portrait" },
+    },
+    
+    iphone =
+    {
+        plist =
+        {
+            CFBundleIconFiles = {},  -- Required!
+            UILaunchImages = {},     -- Required!
+            MinimumOSVersion = "7.0",
+
+            -- Icon image files table
+            CFBundleIconFiles = {
+                "Icon.png",
+                "Icon@2x.png",
+                "Icon-60.png",
+                "Icon-60@2x.png",
+                "Icon-60@3x.png",
+                "Icon-72.png",
+                "Icon-72@2x.png",
+                "Icon-76.png",
+                "Icon-76@2x.png",
+                "Icon-167.png",
+                "Icon-Small-40.png",
+                "Icon-Small-40@2x.png",
+                "Icon-Small-50.png",
+                "Icon-Small-50@2x.png",
+                "Icon-Small.png",
+                "Icon-Small@2x.png",
+                "Icon-Small@3x.png",
+                "Icon-120.png"
+            },
+
+            -- Required launch image files/definitions table (see section below)
+            UILaunchImages = {
+                {  -- iPhone 4 Portrait
+                    ["UILaunchImageMinimumOSVersion"] = "7.0",
+                    ["UILaunchImageName"] = "Default",
+                    ["UILaunchImageOrientation"] = "Portrait",
+                    ["UILaunchImageSize"] = "{320, 480}"
+                },
+                {  -- iPhone 5 Portrait
+                    ["UILaunchImageMinimumOSVersion"] = "7.0",
+                    ["UILaunchImageName"] = "Default-568h",
+                    ["UILaunchImageOrientation"] = "Portrait",
+                    ["UILaunchImageSize"] = "{320, 568}"
+                },
+                {  -- iPhone 6 Portrait
+                    ["UILaunchImageMinimumOSVersion"] = "8.0",
+                    ["UILaunchImageName"] = "Default-375w-667h@2x~iphone",
+                    ["UILaunchImageOrientation"] = "Portrait",
+                    ["UILaunchImageSize"] = "{375, 667}"
+                },
+                {  -- iPhone 6 Plus Portrait
+                    ["UILaunchImageMinimumOSVersion"] = "8.0",
+                    ["UILaunchImageName"] = "Default-736h",
+                    ["UILaunchImageOrientation"] = "Portrait",
+                    ["UILaunchImageSize"] = "{414, 736}"
+                }
+            }
+        },
+    },
+
+    plugins =
+    {
+    
+    },
+
+}
